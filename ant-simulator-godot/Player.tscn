@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://2kj2ppkgofo7"]
+
+[ext_resource type="Texture2D" uid="uid://bvgt4qv7oxes2" path="res://assets/ant_player_sprite.png" id="1_xhfnw"]
+
+[node name="Node2D" type="Node2D" unique_id=1551686880]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1833433834]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=174456780]
+texture = ExtResource("1_xhfnw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2111316453]

@@ -1,8 +1,10 @@
-# Etapa 01
-- **[]** sprites Player e Formigueiro.
-- **[]** movimentos simples + entrar e sair do formigueiro.
-- **[]** sprites Saída de dentro do Formigueiro e Comida.
-- **[]** pegar e largar comida.
+# Step 01
 
-# Tecnologias
-- Godot
+- **[x]** sprites Player, Anthill e Tiles.
+- **[]** simple movements + enter and exit of anthill.
+- **[]** sprites inside anthill and food.
+- **[]** pick up and drop food.
+
+## Technologies
+
+- Godot, LibreSprite.
