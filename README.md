@@ -7,4 +7,4 @@
 
 ## Technologies
 
-- Godot, LibreSprite.
+- GDScript, LibreSprite.
