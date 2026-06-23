@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://crxfn5tir03oc" path="res://character_body_2d.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bvgt4qv7oxes2" path="res://assets/ant_player_sprite.png" id="1_xhfnw"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_follt"]
+size = Vector2(32, 34)
+
 [node name="Node2D" type="Node2D" unique_id=1551686880]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1833433834]
@@ -12,3 +15,4 @@ script = ExtResource("1_kpjcp")
 texture = ExtResource("1_xhfnw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2111316453]
+shape = SubResource("RectangleShape2D_follt")
