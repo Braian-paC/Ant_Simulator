@@ -2,23 +2,35 @@ extends CharacterBody2D
 
 @export var speed = 300
 @export var can_change_scene = true
+@export var food = "StaticBody2D_Food"
+var food_node = null
+var world
+
+func _ready():
+	world = get_parent().get_parent()
+	await get_tree().process_frame
+	_set_spawn()
 
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_E:
-			for i in get_slide_collision_count():
+			if food_node != null:
+				var global_pos = global_position
+				world.add_child(food_node)
+				food_node.global_position = Vector2(global_pos)
+				print(global_pos)
+				print(food_node.global_position)
+			else:
+				print("Valor nulo")
+			for i in range(get_slide_collision_count()):
 				var collision = get_slide_collision(i)
-				if collision.get_collider().name == "StaticBody2D_Food":
-					print('Player collide with Food!')
-					collision.get_collider().queue_free()
+				if collision.get_collider().name == food:
+					food_node = collision.get_collider()
+					food_node.get_parent().remove_child(food_node)
 
 func get_input():
 	var input_direction = Input.get_vector("Left", "Right", "Up", "Down") # Direction of Movement
 	velocity = input_direction * speed
-	
-func _ready():
-	await get_tree().process_frame
-	_set_spawn()
 
 func _set_spawn():
 	var spawn_name = GameManager.next_spawn

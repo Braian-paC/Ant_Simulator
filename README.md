@@ -1,10 +1,17 @@
 # Step 01
 
-* **[x]** sprites Player, Anthill e Tiles.
-* **[x]** simple movements + enter and exit of anthill.
-* **[x]** sprites inside anthill and food.
-* **[]** pick up and drop food.
+- **[x]** sprites **Player**, **Anthill** e **Tiles**.
+- **[x]** simple movements + enter and exit of **Anthill**.
+- **[x]** sprites inside **Anthill** and **Food**.
+- **[x]** pick up and drop **Food** in the **World**.
 
-## Technologies
+# Step 02
+
+- **[]** code and folders **Organization**.
+- **[]** **Player** rotation + collision in border of the **World** and **Anthill**.
+- **[]** new **Anthill Tiles** sprite.
+- **[]** pick up and drop **Food** in the **Anthill**.
+
+### Technologies
 
 - GDScript and LibreSprite.

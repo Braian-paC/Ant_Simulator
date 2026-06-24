@@ -33,7 +33,7 @@ position = Vector2(550, 550)
 position = Vector2(324, 348)
 
 [node name="Node2D_Player" parent="." unique_id=1551686880 instance=ExtResource("2_d1c63")]
-position = Vector2(483, 79)
+position = Vector2(324, 394)
 
 [node name="StaticBody2D_Anthill_1" parent="." unique_id=1953647750 instance=ExtResource("3_1lgw5")]
 position = Vector2(33, 599)
