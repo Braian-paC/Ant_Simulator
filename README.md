@@ -7,7 +7,7 @@
 
 # Step 02
 
-- **[]** code and folders **Organization**.
+- **[x]** code and folders **Organization**.
 - **[]** **Player** rotation + collision in border of the **World** and **Anthill**.
 - **[]** new **Anthill Tiles** sprite.
 - **[]** pick up and drop **Food** in the **Anthill**.

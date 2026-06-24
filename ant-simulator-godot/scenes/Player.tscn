@@ -1,18 +1,28 @@
 [gd_scene format=3 uid="uid://cn3bhyce5lte7"]
 
-[ext_resource type="Script" path="res://character_body_2d.gd" id="1_kpjcp"]
+[ext_resource type="Script" uid="uid://bg55tkwlh7j6l" path="res://scripts/Player/player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bvgt4qv7oxes2" path="res://assets/ant_player_sprite.png" id="1_xhfnw"]
+[ext_resource type="Script" uid="uid://dwe0ji05hg7g" path="res://scripts/Player/player_movement.gd" id="3_qu4a1"]
+[ext_resource type="Script" uid="uid://cvrto4tha5xwg" path="res://scripts/Player/player_interaction.gd" id="4_70d11"]
+[ext_resource type="Script" uid="uid://d0dhqiifkw8bo" path="res://scripts/Player/player_scene.gd" id="5_cw2d6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_follt"]
 size = Vector2(32, 34)
 
-[node name="Player" type="Node2D" unique_id=1551686880]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1833433834]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1276973783]
 script = ExtResource("1_kpjcp")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=174456780]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2143774214]
 texture = ExtResource("1_xhfnw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=2111316453]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=999983784]
 shape = SubResource("RectangleShape2D_follt")
+
+[node name="Movement" type="Node2D" parent="." unique_id=839402996]
+script = ExtResource("3_qu4a1")
+
+[node name="Interaction" type="Node2D" parent="." unique_id=1283434195]
+script = ExtResource("4_70d11")
+
+[node name="SceneHandler" type="Node2D" parent="." unique_id=939952091]
+script = ExtResource("5_cw2d6")
