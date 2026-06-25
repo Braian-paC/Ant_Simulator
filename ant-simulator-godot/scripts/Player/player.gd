@@ -5,14 +5,7 @@ extends CharacterBody2D
 @onready var scene_handler = $SceneHandler
 
 func set_spawn():
-	var spawn_name = GameManager.next_spawn
-	var scene = get_tree().current_scene
-	var spawn = scene.get_node_or_null(spawn_name)
-
-	if spawn:
-		global_position = spawn.global_position
-	else:
-		print("Spawn não encontrado:", spawn_name)
+	global_position = GameManager.Spawn_Start.global_position
 
 func _ready():
 	call_deferred("set_spawn")

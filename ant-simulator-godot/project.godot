@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="AntSimulator_Godot"
-run/main_scene="uid://davl33g2s2uqk"
+run/main_scene="uid://bjb6v26lti2vh"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
