@@ -7,11 +7,9 @@ radius = 8.5
 
 [node name="StaticBody2D_Food" type="StaticBody2D" unique_id=539977135]
 
-[node name="Area2D_Food" type="Area2D" parent="." unique_id=565888048]
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D_Food" unique_id=1251636965]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1251636965]
 texture = ExtResource("1_oug6s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Food" unique_id=1040318874]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1040318874]
 shape = SubResource("CircleShape2D_o0h62")
 one_way_collision_margin = 0.0
