@@ -7,8 +7,6 @@ var food_scene = preload("res://scenes/Food.tscn")
 var food_col = null
 
 @onready var Player = get_node("/root/MainScreen/Persistent/CharacterBody2D")
-@onready var Spawn_Anthill = get_node("/root/MainScreen/Persistent/Spawn_Entrance_Anthill")
-@onready var Spawn_World = get_node("/root/MainScreen/Persistent/Spawn_Entrance_World")
 @onready var World = get_node("/root/MainScreen/World_Layer/World")
 @onready var Anthill = get_node("/root/MainScreen/World_Layer/Anthill")
 @onready var FoodGetNode = get_node("/root/MainScreen/Persistent/StaticBody2D_Food")
