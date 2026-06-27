@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c3fhnpijk1bob" path="res://assets/tiles_sprite_02.jpg" id="1_svp2y"]
 [ext_resource type="PackedScene" uid="uid://b8idu3c2geb5u" path="res://scenes/Anthill_Anthill.tscn" id="2_1agfe"]
 [ext_resource type="PackedScene" uid="uid://cn3bhyce5lte7" path="res://scenes/Player.tscn" id="2_ju4p7"]
+[ext_resource type="Script" uid="uid://becl152vv0fel" path="res://scripts/TileMap.gd" id="2_lf8d6"]
 [ext_resource type="PackedScene" uid="uid://c8kaflwy5nwnb" path="res://scenes/Food.tscn" id="3_ju4p7"]
 [ext_resource type="Texture2D" uid="uid://dqarirl5m5v0j" path="res://assets/tiles_sprite_01.jpg" id="3_lf8d6"]
 [ext_resource type="PackedScene" uid="uid://bxnf0fjr3lu3" path="res://scenes/Anthill_World.tscn" id="4_50uwr"]
@@ -48,6 +49,7 @@ b = Vector2(-642, -104)
 [node name="World_Layer" type="Node2D" parent="." unique_id=800345212]
 
 [node name="World" type="Node2D" parent="World_Layer" unique_id=1847397859]
+script = ExtResource("2_lf8d6")
 
 [node name="TileMap_World" type="TileMap" parent="World_Layer/World" unique_id=1049752913]
 tile_set = SubResource("TileSet_nkv16")
