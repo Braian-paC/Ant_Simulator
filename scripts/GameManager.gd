@@ -1,10 +1,11 @@
-extends Node
+extends Node2D
 
 var food_node = false
 var food_world = true
 var food_anthill = false
 var food_scene = preload("res://scenes/Food.tscn")
 var food_col = null
+var screen_size = null
 
 @onready var Player = get_node("/root/MainScreen/Persistent/CharacterBody2D")
 @onready var World = get_node("/root/MainScreen/World_Layer/World")

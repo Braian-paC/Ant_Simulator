@@ -7,6 +7,8 @@ extends Node2D
 
 func _ready() -> void:
 	resize_map()
+	GameManager.screen_size = get_viewport_rect().size
+	print(GameManager.screen_size)
 
 func resize_map():
 	TileMap_World.clear()

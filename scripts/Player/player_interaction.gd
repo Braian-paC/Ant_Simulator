@@ -2,7 +2,6 @@ extends Node
 
 @export var food_name = "StaticBody2D_Food"
 
-
 func handle(player):
 	if Input.is_action_just_pressed("InteractItem"):
 

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c8kaflwy5nwnb" path="res://scenes/Food.tscn" id="3_ju4p7"]
 [ext_resource type="Texture2D" uid="uid://dqarirl5m5v0j" path="res://assets/tiles_sprite_01.jpg" id="3_lf8d6"]
 [ext_resource type="PackedScene" uid="uid://bxnf0fjr3lu3" path="res://scenes/Anthill_World.tscn" id="4_50uwr"]
+[ext_resource type="Script" uid="uid://dhujpbii0oth4" path="res://scripts/Map/FoodSpawn.gd" id="6_50uwr"]
 [ext_resource type="Script" uid="uid://d0k330oc3p1i8" path="res://scripts/Map/BorderSize.gd" id="8_lf8d6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ms6rp"]
@@ -61,6 +62,7 @@ format = 2
 [node name="Anthill_to_World" parent="World_Layer/Anthill" unique_id=1953647750 instance=ExtResource("2_1agfe")]
 
 [node name="Persistent" type="Node2D" parent="." unique_id=1405683474]
+script = ExtResource("6_50uwr")
 
 [node name="StaticBody2D_Food" parent="Persistent" unique_id=539977135 instance=ExtResource("3_ju4p7")]
 position = Vector2(324, 348)
