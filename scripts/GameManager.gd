@@ -10,8 +10,10 @@ var food_col = null
 @onready var World = get_node("/root/MainScreen/World_Layer/World")
 @onready var Anthill = get_node("/root/MainScreen/World_Layer/Anthill")
 @onready var FoodGetNode = get_node("/root/MainScreen/Persistent/StaticBody2D_Food")
+@onready var FoodGetNodeCollision = get_node("/root/MainScreen/Persistent/StaticBody2D_Food/CollisionShape2D")
 
 func _ready():
-	World.visible = false
 	FoodGetNode.visible = false
+	FoodGetNodeCollision.set_deferred("disabled", true)
+	World.get_node("World_to_Anthill/CollisionShape2D").set_deferred("disabled", true)
 	Player.position = Vector2(960, 540)

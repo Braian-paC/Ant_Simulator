@@ -9,6 +9,7 @@ func handle(player):
 		if GameManager.food_node:
 			var food = GameManager.food_scene.instantiate()
 			GameManager.FoodGetNode = food
+			GameManager.FoodGetNodeCollision = food.get_node("CollisionShape2D")
 			player.get_parent().add_child(food)
 			food.global_position = player.global_position
 			
