@@ -1,9 +1,18 @@
 extends Node2D
 
-@onready var World_to_Anthill = get_node("/root/MainScreen/World_Layer/World/World_to_Anthill")
-@onready var Anthill_to_World = get_node("/root/MainScreen/World_Layer/Anthill/Anthill_to_World")
+var RNG = RandomNumberGenerator.new()
+var Food_tscn = preload("res://scenes/Food.tscn")
+
+@onready var WorldBody = get_node("/root/MainScreen/World_Layer/World/WorldBody")
+@onready var AnthillBody = get_node("/root/MainScreen/World_Layer/Anthill/AnthillBody")
 
 func _ready():
-	World_to_Anthill.position = Vector2(120, 950)
-	Anthill_to_World.position.x = 960
-	GameManager.FoodGetNode.position = Vector2(960, 540)
+	WorldBody.position = Vector2(120, 950)
+	AnthillBody.position.x = 960
+	
+	for i in range(5):
+		var Food = Food_tscn.instantiate()
+		
+		Food.position = Vector2(RNG.randf_range(150, 1770), RNG.randf_range(150, 930))
+		
+		GameManager.World.add_child(Food)

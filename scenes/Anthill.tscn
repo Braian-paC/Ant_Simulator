@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b8idu3c2geb5u"]
+
+[ext_resource type="Texture2D" uid="uid://c3fhnpijk1bob" path="res://assets/tiles_sprite_02.jpg" id="1_48hyy"]
+[ext_resource type="Texture2D" uid="uid://ctdxnw1insyck" path="res://assets/anthill_inside_sprite.png" id="1_gkuxl"]
+[ext_resource type="Script" uid="uid://buqxql7e6tg7l" path="res://scripts/Map/SettingMapSize.gd" id="2_tg34y"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tg34y"]
+texture = ExtResource("1_48hyy")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yb5g5"]
+sources/0 = SubResource("TileSetAtlasSource_tg34y")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpjcp"]
+radius = 21.76
+
+[node name="Anthill" type="Node2D" unique_id=1853447352]
+
+[node name="TileMap_Anthill" type="TileMap" parent="." unique_id=1492444882]
+tile_set = SubResource("TileSet_yb5g5")
+rendering_quadrant_size = 10
+format = 2
+script = ExtResource("2_tg34y")
+
+[node name="AnthillBody" type="StaticBody2D" parent="." unique_id=1953647750]
+
+[node name="Sprite2D" type="Sprite2D" parent="AnthillBody" unique_id=269783705]
+texture = ExtResource("1_gkuxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnthillBody" unique_id=1532316590]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_kpjcp")

@@ -1,34 +1,10 @@
 [gd_scene format=3 uid="uid://bjb6v26lti2vh"]
 
-[ext_resource type="Script" uid="uid://buqxql7e6tg7l" path="res://scripts/Map/SettingMapSize.gd" id="1_1agfe"]
-[ext_resource type="Texture2D" uid="uid://c3fhnpijk1bob" path="res://assets/tiles_sprite_02.jpg" id="1_svp2y"]
-[ext_resource type="PackedScene" uid="uid://b8idu3c2geb5u" path="res://scenes/Anthill_Anthill.tscn" id="2_1agfe"]
+[ext_resource type="Script" uid="uid://b00amsyjc1fpx" path="res://scripts/Map/ObjectSize.gd" id="1_ju4p7"]
+[ext_resource type="PackedScene" uid="uid://b8idu3c2geb5u" path="res://scenes/Anthill.tscn" id="2_1agfe"]
 [ext_resource type="PackedScene" uid="uid://cn3bhyce5lte7" path="res://scenes/Player.tscn" id="2_ju4p7"]
-[ext_resource type="PackedScene" uid="uid://c8kaflwy5nwnb" path="res://scenes/Food.tscn" id="3_ju4p7"]
-[ext_resource type="Texture2D" uid="uid://dqarirl5m5v0j" path="res://assets/tiles_sprite_01.jpg" id="3_lf8d6"]
-[ext_resource type="PackedScene" uid="uid://bxnf0fjr3lu3" path="res://scenes/Anthill_World.tscn" id="4_50uwr"]
-[ext_resource type="Script" uid="uid://dhujpbii0oth4" path="res://scripts/Map/FoodSpawn.gd" id="6_50uwr"]
+[ext_resource type="PackedScene" uid="uid://bxnf0fjr3lu3" path="res://scenes/World.tscn" id="4_50uwr"]
 [ext_resource type="Script" uid="uid://d0k330oc3p1i8" path="res://scripts/Map/BorderSize.gd" id="8_lf8d6"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ms6rp"]
-texture = ExtResource("3_lf8d6")
-0:0/0 = 0
-1:1/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_nkv16"]
-sources/0 = SubResource("TileSetAtlasSource_ms6rp")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_omtq4"]
-texture = ExtResource("1_svp2y")
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_d0kku"]
-sources/0 = SubResource("TileSetAtlasSource_omtq4")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_omtq4"]
 
@@ -39,36 +15,17 @@ sources/0 = SubResource("TileSetAtlasSource_omtq4")
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nkv16"]
 
 [node name="MainScreen" type="Node2D" unique_id=1642832126]
+script = ExtResource("1_ju4p7")
 
 [node name="World_Layer" type="Node2D" parent="." unique_id=800345212]
 
-[node name="World" type="Node2D" parent="World_Layer" unique_id=1847397859]
-script = ExtResource("1_1agfe")
+[node name="World" parent="World_Layer" unique_id=945072767 instance=ExtResource("4_50uwr")]
 
-[node name="TileMap_World" type="TileMap" parent="World_Layer/World" unique_id=1049752913]
-tile_set = SubResource("TileSet_nkv16")
-rendering_quadrant_size = 10
-format = 2
-
-[node name="World_to_Anthill" parent="World_Layer/World" unique_id=1962136717 instance=ExtResource("4_50uwr")]
-
-[node name="Anthill" type="Node2D" parent="World_Layer" unique_id=449752838]
-
-[node name="TileMap_Anthill" type="TileMap" parent="World_Layer/Anthill" unique_id=1192716216]
-tile_set = SubResource("TileSet_d0kku")
-rendering_quadrant_size = 10
-format = 2
-
-[node name="Anthill_to_World" parent="World_Layer/Anthill" unique_id=1953647750 instance=ExtResource("2_1agfe")]
+[node name="Anthill" parent="World_Layer" unique_id=1853447352 instance=ExtResource("2_1agfe")]
 
 [node name="Persistent" type="Node2D" parent="." unique_id=1405683474]
-script = ExtResource("6_50uwr")
 
-[node name="StaticBody2D_Food" parent="Persistent" unique_id=539977135 instance=ExtResource("3_ju4p7")]
-position = Vector2(324, 348)
-input_pickable = true
-
-[node name="CharacterBody2D" parent="Persistent" unique_id=1276973783 instance=ExtResource("2_ju4p7")]
+[node name="Player" parent="Persistent" unique_id=1276973783 instance=ExtResource("2_ju4p7")]
 position = Vector2(329, 173)
 
 [node name="Border-Map" type="StaticBody2D" parent="Persistent" unique_id=47068689]
