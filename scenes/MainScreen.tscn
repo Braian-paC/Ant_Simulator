@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b00amsyjc1fpx" path="res://scripts/Map/ObjectSize.gd" id="1_ju4p7"]
 [ext_resource type="PackedScene" uid="uid://b8idu3c2geb5u" path="res://scenes/Anthill.tscn" id="2_1agfe"]
 [ext_resource type="PackedScene" uid="uid://cn3bhyce5lte7" path="res://scenes/Player.tscn" id="2_ju4p7"]
+[ext_resource type="Script" uid="uid://buuaoqdgeignr" path="res://scripts/SpawnFood.gd" id="2_svp2y"]
 [ext_resource type="PackedScene" uid="uid://bxnf0fjr3lu3" path="res://scenes/World.tscn" id="4_50uwr"]
 [ext_resource type="Script" uid="uid://d0k330oc3p1i8" path="res://scripts/Map/BorderSize.gd" id="8_lf8d6"]
 
@@ -16,6 +17,9 @@
 
 [node name="MainScreen" type="Node2D" unique_id=1642832126]
 script = ExtResource("1_ju4p7")
+
+[node name="SpawnFood" type="Node2D" parent="." unique_id=382896295]
+script = ExtResource("2_svp2y")
 
 [node name="World_Layer" type="Node2D" parent="." unique_id=800345212]
 

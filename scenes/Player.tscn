@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dwe0ji05hg7g" path="res://scripts/Player/player_movement.gd" id="3_qu4a1"]
 [ext_resource type="Script" uid="uid://cvrto4tha5xwg" path="res://scripts/Player/player_interaction.gd" id="4_70d11"]
 [ext_resource type="Script" uid="uid://d0dhqiifkw8bo" path="res://scripts/Player/player_scene.gd" id="5_cw2d6"]
+[ext_resource type="Script" uid="uid://bh5txfk7tp5fv" path="res://scripts/Map/ChangeMap.gd" id="6_70d11"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_follt"]
 size = Vector2(32, 34)
@@ -27,3 +28,6 @@ script = ExtResource("4_70d11")
 
 [node name="SceneHandler" type="Node2D" parent="." unique_id=939952091]
 script = ExtResource("5_cw2d6")
+
+[node name="ChangeMapNode" type="Node2D" parent="." unique_id=1281180769]
+script = ExtResource("6_70d11")
